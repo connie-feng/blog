@@ -8,7 +8,10 @@
         <ul class="md:flex px-4 ml-16 font-semibold font-heading space-x-12">
           <li><%= link_to "Home", root_path, class: "hover:text-violet-200" %> </li>
           <li><%= link_to "About", root_path, class: "hover:text-violet-200" %></li>
-          <li><%= link_to "Testimonials", root_path, class: "hover:text-violet-200" %></li>
+          <li><%= link_to "Testimonials", testimonials_path, class: "hover:text-violet-200" %></li>
+        </ul>
+        <ul>
+          <%= button_to "Log out", destroy_user_session_path, method: :delete if user_signed_in? %>
         </ul>
         </div>
       </div>
