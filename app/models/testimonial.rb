@@ -8,4 +8,8 @@ class Testimonial < ApplicationRecord
   def draft?
     published_at.nil?
   end
+
+  def published?
+    published_at.present?
+  end
 end

@@ -10,6 +10,5 @@ FactoryBot.define do
     trait :scheduled do
       published_at { 1.month.from_now }
     end
-
   end
 end

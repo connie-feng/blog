@@ -74,3 +74,5 @@ gem "tailwindcss-rails", "~> 2.3"
 gem "pagy", "~> 7.0"
 
 gem "pry", "~> 0.14.2"
+
+gem "faker", "~> 3.3"
