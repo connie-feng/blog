@@ -14,7 +14,7 @@ class TestimonialsController < ApplicationController
   def create
     @testimonial = Testimonial.new(testimonial_params.merge(published_at: nil))
     if @testimonial.save
-      redirect_to testimonials_path
+      redirect_to testimonials_path, notice: "Thank you for submitting a testimonial!"
     else
       render :new, status: :unprocessable_entity
     end
@@ -25,7 +25,6 @@ class TestimonialsController < ApplicationController
 
   def update
     if @testimonial.update(testimonial_params)
-      binding.irb
       redirect_to testimonials_path, notice: "Testimonial updated!"
     else
       render :edit, status: :unprocessable_entity

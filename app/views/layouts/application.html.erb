@@ -1,7 +1,7 @@
  <!DOCTYPE html>
 <html>
   <head>
-    <title>Blog</title>
+    <title>Connie Feng Yoga</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -16,8 +16,7 @@
     <%= render partial: "shared/navbar" %>
 
     <div class="prose mx-auto mb-16">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+      <%= render partial: "shared/alerts" %>
 
       <%= yield %>
     </div>
